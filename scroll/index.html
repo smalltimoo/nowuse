@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>简单上下拉</title>
+
+<link rel="stylesheet" type="text/css" href="css.css">
+
+<script type="application/javascript" src="./iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+	console.log("你好");
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
+
+<style type="text/css" media="all">
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	font-size:12px;
+}
+
+#header {
+	position:absolute;
+	top:0; left:0;
+	width:100%;
+	height:45px;
+	line-height:45px;
+	background-color:#d51875;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
+	padding:0;
+	color:#eee;
+	font-size:20px;
+	text-align:center;
+}
+
+
+#footer {
+	position:absolute;
+	bottom:0; left:0;
+	width:100%;
+	height:48px;
+	background-color:#222;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+	padding:0;
+	border-top:1px solid #444;
+}
+
+#wrapper {
+	z-index:1;
+	position:absolute; 
+	top:45px; 
+	bottom:48px;
+	left:0;
+	width:100%;
+	background:#ccc;
+	overflow:auto;
+}
+
+#scroller {
+/*	position:relative;*/
+/*	float:left;*/
+	width:100%;
+	padding:0;
+}
+
+#scroller ul {
+	padding:0;
+	margin:0;
+	width:100%;
+}
+
+#scroller li {
+	padding:0 10px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div id="header">iScroll</a></div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+			<li>我是第1行</li>
+			<li id="aaa">我是第2行</li>
+			<li>我是第3行</li>
+			<li>我是第4行</li>
+			<li>我是第5行</li>
+			<li>我是第6行</li>
+			<li>我是第7行</li>
+			<li>我是第8行</li>
+			<li>我是第9行</li>
+			<li>我是第10行</li>
+			<li>我是第11行</li>
+			<li>我是第12行</li>
+			<li>我是第13行</li>
+			<li>我是第14行</li>
+			<li>我是第15行</li>
+			<li>我是第16行</li>
+			<li>我是第17行</li>
+			<li>我是第18行</li>
+			<li>我是第19行</li>
+			<li>我是第20行</li>
+			<li>我是第21行</li>
+			<li>我是第22行</li>
+			<li>我是第23行</li>
+			<li>我是第24行</li>
+			<li>我是第25行</li>
+			<li>我是第26行</li>
+			<li>我是第27行</li>
+			<li>我是第28行</li>
+			<li>我是第29行</li>
+		</ul>
+	</div>
+</div>
+
+<div id="footer"></div>
+
+</body>
+</html>
